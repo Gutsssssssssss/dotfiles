@@ -1,0 +1,24 @@
+" Define leader key
+let mapleader = " "
+
+" Rename
+nnoremap <leader>rn :action RenameElement<CR>
+
+" Search File (like Ctrl+P in VSCode)
+nnoremap <leader>sf :action SearchEverywhere<CR>
+
+" Grep (Find in Files)
+nnoremap <leader>sg :action FindInPath<CR>
+
+" Diagnostics (Problems view)
+nnoremap <leader>sd :action ToggleProblemsView<CR>
+
+" Open File Explorer (Project tool window)
+nnoremap - :action ActivateProjectToolWindow<CR>
+
+" Go to References
+nnoremap gr :action ShowUsages<CR>
+
+" Toggle comment with gc (like vim-commentary)
+nnoremap gc :action CommentByLineComment<CR>
+vnoremap gc :action CommentByLineComment<CR>
