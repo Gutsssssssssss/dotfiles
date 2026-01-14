@@ -1,24 +1,23 @@
-" Define leader key
-let mapleader = " "
+" ==== Core ====
+let mapleader = " "              " ← 리더키는 항상 매핑보다 위에 선언
+set clipboard=unnamedplus
+set number
+set relativenumber
 
-" Rename
-nnoremap <leader>rn :action RenameElement<CR>
+" ==== Mappings ====
+" gc: 라인 주석 토글 (노멀/비주얼)
+nnoremap gc :action CommentByLineComment<CR>
+xnoremap gc :action CommentByLineComment<CR>
 
-" Search File (like Ctrl+P in VSCode)
-nnoremap <leader>sf :action SearchEverywhere<CR>
-
-" Grep (Find in Files)
-nnoremap <leader>sg :action FindInPath<CR>
-
-" Diagnostics (Problems view)
-nnoremap <leader>sd :action ToggleProblemsView<CR>
-
-" Open File Explorer (Project tool window)
-nnoremap - :action ActivateProjectToolWindow<CR>
-
-" Go to References
+" gr: 레퍼런스(사용처) 탐색
 nnoremap gr :action ShowUsages<CR>
 
-" Toggle comment with gc (like vim-commentary)
-nnoremap gc :action CommentByLineComment<CR>
-vnoremap gc :action CommentByLineComment<CR>
+" gI: 구현(Implementation)으로 이동
+nnoremap gI :action GotoImplementation<CR>
+
+" rn: 리네임
+nnoremap <leader>rn :action RenameElement<CR>
+
+" Zen/집중 모드 토글
+nnoremap <leader>z :action ToggleZenMode<CR>
+nnoremap <leader>a :action ShowIntentionActions<CR>
